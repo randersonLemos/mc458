@@ -43,11 +43,11 @@ void SCM(int *X, int *n, int *i, int *j, int *k, int *MaxSeq, int *MaxSuf)
 
 int main(){    
   int n = 0; scanf("%d\n", &n); n = n - 1;
-  int *X = (int *) malloc(n * sizeof(int) );
+  int *X = (int *) malloc ( (n+1) * sizeof(int) );
   int i, j, k = 0;
   int MaxSeq, MaxSuf = 0;
 
-  for(int i = 1; i < n; ++i)
+  for(int i = 1; i < n+1; ++i)
   {
     int x;
     scanf("%d ", &x);
@@ -56,7 +56,7 @@ int main(){
 
   //printf("n: %d\n", n);
   //printf("X: ");
-  //for(int i = 1; i < n; ++i)
+  //for(int i = 1; i < n+1; ++i)
   //{
   //  printf("%d ", X[i]);
   //}
@@ -65,8 +65,8 @@ int main(){
   SCM(X, &n, &i, &j, &k, &MaxSeq, &MaxSuf);
 
   //printf("%d, %d, %d, %d, %d, %d", n, i, j, k, MaxSeq,  MaxSuf);
-  
-  printf("%d %d", i, j);
+  //
+  printf("%d %d\n", i, j);
 
   free(X);
 }  
