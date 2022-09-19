@@ -1,0 +1,8 @@
+name: mc458-t1
+channels:
+  - defaults
+  - conda-forge
+dependencies:
+  - pip
+  - python
+  - ipython
