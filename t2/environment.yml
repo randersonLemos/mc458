@@ -1,4 +1,4 @@
-name: mc458-t1
+name: mc458-t2
 channels:
   - defaults
   - conda-forge

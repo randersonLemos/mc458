@@ -1,2 +1,2 @@
 source ~/anaconda3/bin/activate
-conda activate mc458-t1
+conda activate mc458-t2
