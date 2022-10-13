@@ -1,14 +1,58 @@
-def swap(X, i, j):
-    keep = X[i]
-    X[i] = X[j]
-    X[j] = keep
+import math
+
+inv = 0
+
+def intercala(A, p, q, r):
+    B = []
+    n = r - p + 1
+    for i in range(p, q+1):
+        B.append(A[i])
+    for j in reversed(range(q+1,r+1)):
+        B.append(A[j])
+
+    i = 0
+    j = n - 1
+    for k in range(p,r+1):
+        if B[i] <= B[j]:
+            A[k] = B[i]
+            i = i + 1
+        else:
+
+            A[k] = B[j]
+            j = j - 1
 
 
+def intercala2(A, p, q, r):
+    global inv
+    B = []
+    n = r - p + 1
+    for i in range(p, r+1):
+        B.append(A[i])
+
+    i = 0
+    j = q - p + 1
+    n = r - p + 1
+    B.append(math.inf)
+    for k in range(p,r+1):
+        if B[i] <= B[j] and i < (q - p + 1):
+            inv += abs((k-p) - i)
+            A[k] = B[i]
+            i = i + 1
+        else:
+            A[k] = B[j]
+            j = j + 1
+
+
+def mergesort(A, p, r):
+    if p < r:
+        q = int( (p+r)/2 )
+        mergesort(A, p  , q)
+        mergesort(A, q+1, r)
+        intercala2(A, p, q, r)
 
 
 if __name__ == '__main__':
     #import argparse
-    #import time
     #parser = argparse.ArgumentParser()
     #parser.add_argument('--file', type=argparse.FileType('r'))
     #args = parser.parse_args()
@@ -19,33 +63,9 @@ if __name__ == '__main__':
     X = list( map(int, input().strip().split(' ')) )
 
     count = 0
-    IMIN  = 0
-    IMAX  = n - 1
+    p = 0
+    r = n - 1
 
-    #print('n:',n)
+    mergesort(X, p, r)
 
-    #t = time.time()
-    while True:
-        for i in range(IMIN, IMAX):
-            j = i + 1
-            if X[i] > X[j]:
-                keep = X[i]
-                X[i] = X[j]
-                X[j] = keep
-                count += 1
-
-        if (IMIN + 1) == X[IMIN]:
-            IMIN += 1
-
-        if (IMAX + 1) == X[IMAX]:
-            IMAX -= 1
-
-        if IMIN > IMAX:
-            break
-
-    #print('Time {:3.6f}'.format(time.time() - t))
-    #print('n^2', n*n)
-    print(count)
-
-
-
+    print(inv)
