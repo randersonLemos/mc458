@@ -1,0 +1,9 @@
+name: mc458-t3
+channels:
+  - defaults
+  - conda-forge
+dependencies:
+  - pip
+  - python
+  - ipython
+  - numpy
