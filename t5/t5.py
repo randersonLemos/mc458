@@ -1,5 +1,14 @@
 import numpy as np
 
+def check_range_coverage(V, Keys, Groups):
+    I = []
+    candidate = (0, 0)
+    for key in Keys:
+        l, r = key, Groups[key]
+        print(l,r)
+
+    import IPython; IPython.embed()
+
 if __name__ == '__main__':
     import argparse
     parser = argparse.ArgumentParser()
@@ -7,20 +16,21 @@ if __name__ == '__main__':
     args = parser.parse_args()
     V = int( args.file.readline().strip() )
     n = int( args.file.readline().strip() )
-    I = []
+
+    Groups = {}
     for i in range(n):
-        I.append( args.file.readline().strip().split(' ') )
+        l, r =  list( map( int, args.file.readline().strip().split(' ') ) )
+        if (l < 0 and r > 0) or (l > 0):
+            if l in Groups and Groups[l] < r:
+                Groups[l] = r
+            else:
+                Groups[l] = r
 
-    import IPython; IPython.embed()
-    #aux = np.inf
-    #print('-'.join( map(str,notas) ) , '|' ,V) 
-    #for nota in notas:
-    #    mod = V%nota
-    #    print(mod)
+    Keys = sorted(Groups.keys())
+                
 
+    print('V     ', [0,V])
+    print('Keys  ', Keys)
+    print('Groups', Groups)
 
-    V = U + max(notas)
-    V, n = PD(n, notas, V, U)
-
-    print(V,n)
-
+    check_range_coverage(V, Keys, Groups)
