@@ -1,0 +1,32 @@
+Algoritmos, modelos de computação, análise de complexidade
+Leitura: [CLRS] Capítulo 1, 3
+Indução matemática - revisão
+Leitura: [Manber] Capítulo 2
+Somas, crescimento de funções e análise assintótica
+Leitura: [CLRS] Capítulo 3, [Manber] Capítulo 3
+Divisão-e-conquista
+Leitura: [CLRS] Seção 2.3, Capítulo 4 (em [3])
+Recorrências e métodos de resolução
+Leitura: [CLRS] Capítulo 4
+Projeto de algoritmos por indução
+Leitura: [Manber] Seções 5.2, 5.3, 5.4, 5.5, 5.7, 5.8, 5.9, 6.11.1, 6.11.2
+Busca binária e variações
+Leitura: [Manber] Seção 6.2
+Algoritmos de ordenação: selection sort, insertion sort e mergesort
+Leitura: [CLRS] Capítulo 2, [Manber] Seção 6.4
+Algoritmos de ordenação: heapsort
+Leitura: [CLRS] Capítulo 6, [Manber] Seção 6.4
+Filas de prioridade
+Leitura: [CLRS] Capítulo 6, [Manber] Capítulo 6
+Algoritmos de ordenação: mergesort e quicksort
+Leitura: [CLRS] Capítulo 2 e 7, [Manber] Seção 6.4
+Cota inferior de ordenação
+Leitura: [CLRS] Capítulo 8,[Manber] Seção 6.4
+Algoritmos lineares para ordenação
+Leitura: [CLRS] Capítulo 8, [Manber] Seção 6.4
+Estatísticas de ordem (order statistics)
+Leitura: [CLRS] Capítulo 9, [Manber] Seção 6.5
+Programação dinâmica
+Leitura: [CLRS] Seções 15.2, 15.3, 15.4 e Seção 15.1 (em [3]). Note que o problema tratado na Seção 15.1 é diferente do que aparece na segunda e na terceira edição. Apresentarei o da terceira edição (referência [3]).
+Algoritmos gulosos Aqui termina MC458.
+Leitura: [CLRS] Seções 16.1, 16.2, 16.3
